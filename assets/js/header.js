@@ -22,3 +22,37 @@ dropdownLinks.forEach(link => {
             });
     });
 });
+let lastScrollTop = 0;
+const topBar = document.querySelector(".navbar-top");
+const innerNavbar = document.querySelector(".navbar-inner");
+
+// small threshold to avoid rapid hide/show on minor scrolls
+const SCROLL_THRESHOLD = 8;
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const delta = currentScroll - lastScrollTop;
+
+    if (Math.abs(delta) < SCROLL_THRESHOLD) {
+        // tiny scroll — ignore (prevents jitter)
+        return;
+    }
+
+    if (delta > 0 && currentScroll > 80) {
+        // scrolling down and scrolled enough -> hide top bar
+        topBar.classList.add("hide");
+    } else if (delta < 0) {
+        // scrolling up -> show top bar
+        topBar.classList.remove("hide");
+    }
+
+    // optional: add subtle shadow when inner navbar is scrolled
+    if (currentScroll > 20) {
+        innerNavbar.classList.add("scrolled");
+    } else {
+        innerNavbar.classList.remove("scrolled");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
