@@ -114,27 +114,8 @@
     display: block;
 }
 
-/* ========= ARROW ICON ========= */
-.menu-item-has-children > a {
-    position: relative;
-    padding-right: 20px;
-}
-.menu-item-has-children > a::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 6px;
-    width: 12px;
-    height: 12px;
-    background-image: url("/assets/icons/arrow-down-light.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: transform 0.3s ease;
-    filter: brightness(3);
-}
-.menu-item-has-children.open > a::after {
-    transform: rotate(180deg);
-}
+
+
 
 /* ========= BURGER BUTTON ========= */
 .navbar-menu-toggle.hamburger {
@@ -346,25 +327,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-}
-.ceo-after {
-       width: 14vw;
-    height: 16vw; background-image: url(/assets/images/ceo-after.png);
-    top: 0;
-    right: 0;
-}
-.ceo-before {
-    width: 38vw;
-    height: 32vw;
-    bottom: 0;
-    left: 0;
-}
-.ceo-after, .ceo-before {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    z-index: 0;
 }
 .service  {
         padding-block: var(--space) var(--space);
