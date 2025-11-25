@@ -5,29 +5,28 @@ body {
     font-size: 16px;
     color: #2a1f03;
 }
-
 /* ========= HEADER ========= */
 .header {
     width: 100%;
- position: fixed;
+    position: fixed;
     top: 0;
-      background: var(--v3-white-1);
+    background: var(--v3-white-1);
     z-index: 999;
 }
 
 /* ========= TOP LOGO BAR ========= */
 .navbar-top {
-      max-height: 200px;
+    max-height: 200px;
     display: flex;
     justify-content: center;
     overflow: hidden;
     padding: 14px 5%;
-    transition: max-height 0.4s ease, padding 0.4s ease
+    transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 /* ========= DARK BAR ========= */
 .navbar-inner {
-       display: grid;
+    display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     grid-column-gap: 24px;
@@ -35,7 +34,7 @@ body {
     padding: 16px 5%;
 }
 
-/* ========= SOCIAL ICONS ========= */
+/* ========= LEFT SIDE CONTACT ========= */
 .navbar-contact {
     display: flex;
     align-items: center;
@@ -44,16 +43,13 @@ body {
 .navbar-contact img {
     width: 22px;
     height: 22px;
-    filter: brightness(3); /* Makes icons white */
+    filter: brightness(3);
 }
-
-/* ========= ADDRESS + OPEN ========= */
 .navbar-info {
     display: flex;
-   grid-column-gap:24px;
-    justify-content: center;
-    color: #ffffffcc;
+    grid-column-gap: 24px;
     font-size: 14px;
+    color: #ffffffcc;
 }
 .navbar-info span {
     font-size: 12px;
@@ -71,7 +67,6 @@ body {
     display: flex;
     justify-content: flex-end;
 }
-
 .menu {
     display: flex;
     align-items: center;
@@ -80,50 +75,131 @@ body {
     padding: 0;
     list-style: none;
 }
-
 .menu li a {
     color: #ffffffdd;
     font-size: 15px;
     text-decoration: none;
     transition: 0.3s ease;
 }
-.menu li:hover > a {
-    color: #fff;
-}
 
-/* ========= DROPDOWN ========= */
+/* ========= DROPDOWN COMMON ========= */
 .menu-item-has-children {
     position: relative;
 }
-
 .sub-menu {
     display: none;
+    list-style: none;
+    background: #251A02;
+    padding: 12px 18px;
+    min-width: 220px;
     position: absolute;
     top: 32px;
     left: 0;
-    background: #251A02;
-    padding: 12px 18px;
-    list-style: none;
-    min-width: 180px;
 }
-
-.menu-item-has-children:hover .sub-menu {
-    display: block;
-}
-
 .sub-menu li a {
     display: block;
     padding: 6px 0;
     color: #ffffffcc;
-    white-space: nowrap;
 }
 .sub-menu li a:hover {
     color: #fff;
 }
-.arrow-bounce {
-    animation: bounce 1.2s infinite ease-in-out;
-    transform-origin: center;
+
+/* ========= DROPDOWN OPEN (CLICK) ========= */
+.menu-item-has-children.open > .sub-menu {
+    display: block;
 }
+
+/* ========= ARROW ICON ========= */
+.menu-item-has-children > a {
+    position: relative;
+    padding-right: 20px;
+}
+.menu-item-has-children > a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background-image: url("/assets/icons/arrow-down-light.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    filter: brightness(3);
+}
+.menu-item-has-children.open > a::after {
+    transform: rotate(180deg);
+}
+
+/* ========= BURGER BUTTON ========= */
+.navbar-menu-toggle.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+.navbar-menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+/* ========= BURGER ANIMATION ========= */
+.navbar-menu-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+.navbar-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.navbar-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ========= MOBILE ========= */
+@media (max-width: 992px) {
+
+    .navbar-inner {
+        grid-template-columns: 1fr auto;
+    }
+    .navbar-contact {
+        display: none;
+    }
+
+    .navbar-menu-toggle.hamburger {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: var(--v3-dark);
+        width: 70%;
+        height: 100vh;
+        flex-direction: column;
+        padding: 120px 24px;
+        transition: right 0.4s ease;
+    }
+    .navbar-menu.show-menu {
+        right: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    /* mobile submenu is inside menu, not floating */
+    .sub-menu {
+        position: static;
+        background: transparent;
+        padding: 10px 0 0 10px;
+    }
+}
+
 .hero {
     min-height: 100vh;
     position: relative;
@@ -298,7 +374,7 @@ body {
     margin-right: auto;
 }
 .service-desc{
-        max-width: 33.7vw;
+    max-width: 33.7vw;
     min-width: 33.7vw;
     position: absolute;
     top: 0;
@@ -333,6 +409,7 @@ body {
     font-weight: 500;
     text-align: center;
 }
+
 .service-title a {
     display: block;
     width: 100%;
@@ -469,12 +546,16 @@ body {
 }
 
 .social-inner {
-    display: grid;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    margin-top: var(--space-md);
-    padding-left: 15%;
-    padding-right: 15%;
+ display: flex;
+    flex-direction: column;
+    grid-row-gap: clamp(28px, 4vw, 40px);
+    padding: 0 5%;
+}
+.instagram-post{
+display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-row-gap: clamp(28px, 4vw, 40px);
+    align-items: center;
 }
 
 .footer {
