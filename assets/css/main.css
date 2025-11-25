@@ -1,0 +1,376 @@
+/* Light */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium Italic */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* SemiBold Italic */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('./assets/fonts/cormorant-infant/CormorantInfant-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* =========================
+   RALEWAY
+   ========================= */
+
+/* Thin */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Thin Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ExtraLight */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ExtraLight Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Medium Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* SemiBold Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Extra Bold */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Extra Bold Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Black */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Black Italic */
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/raleway/Raleway-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* ----------------------------------------- */
+/*               FONT VARIABLES              */
+/* ----------------------------------------- */
+
+:root {
+    --ff-raleway: 'Raleway', sans-serif;
+    --ff-cormorant: 'Cormorant Infant', serif;
+}
+
+
+/* ----------------------------------------- */
+/*       ORIGINAL GLOBAL STYLES (UNCHANGED)  */
+/* ----------------------------------------- */
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 320px;
+    padding: 0;
+}
+
+html {
+    margin: 0 auto 0 !important;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--v3-dark);
+    font-family: var(--ff-raleway);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-x: hidden;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin: 0 auto 0;
+}
+
+body::-webkit-scrollbar { width: 10px; }
+body::-webkit-scrollbar-track { background-color: var(--v3-dark); }
+body::-webkit-scrollbar-thumb { background-color: var(--v3-dark); }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+figure, ul {
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+}
+
+a, a:hover, a:focus, a:active { text-decoration: none; }
+li { list-style: none; }
+strong, b { font-weight: 500; }
+address { font-style: normal; }
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    user-select: none;
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+label { display: block; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] { -moz-appearance: textfield; }
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 30px var(--v3-white) inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--v3-white) inset !important;
+    -webkit-text-fill-color: var(--v3-dark) !important;
+}
+
+.container-md {
+    max-width: 1080px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overlay::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
