@@ -1,58 +1,65 @@
-const burger = document.querySelector('.navbar-menu-toggle');
-const mobileMenu = document.querySelector('.navbar-menu');
-const dropdownLinks = document.querySelectorAll('.menu-item-has-children > a');
+// Load header.html into the placeholder element
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector("#header-placeholder").innerHTML = data;
 
-// Burger Toggle
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    mobileMenu.classList.toggle('show-menu');
+            // After header is inserted → initialize menu scripts
+            initHeaderScripts();
+        });
 });
 
-// Dropdown Toggle (Click on Desktop + Mobile)
-dropdownLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault(); 
-        const parent = link.parentElement;
-        parent.classList.toggle('open');
+function initHeaderScripts() {
+    const burger = document.querySelector('.navbar-menu-toggle');
+    const mobileMenu = document.querySelector('.navbar-menu');
+    const dropdownLinks = document.querySelectorAll('.menu-item-has-children > a');
 
-        // Close other dropdowns
-        document.querySelectorAll('.menu-item-has-children')
-            .forEach(item => {
-                if (item !== parent) item.classList.remove('open');
-            });
+    // Burger Toggle
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('show-menu');
     });
-});
-let lastScrollTop = 0;
-const topBar = document.querySelector(".navbar-top");
-const innerNavbar = document.querySelector(".navbar-inner");
 
-// small threshold to avoid rapid hide/show on minor scrolls
-const SCROLL_THRESHOLD = 8;
+    // Dropdown Toggle
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const parent = link.parentElement;
+            parent.classList.toggle('open');
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    const delta = currentScroll - lastScrollTop;
+            // Close other dropdowns
+            document.querySelectorAll('.menu-item-has-children')
+                .forEach(item => {
+                    if (item !== parent) item.classList.remove('open');
+                });
+        });
+    });
 
-    if (Math.abs(delta) < SCROLL_THRESHOLD) {
-        // tiny scroll — ignore (prevents jitter)
-        return;
-    }
+    let lastScrollTop = 0;
+    const topBar = document.querySelector(".navbar-top");
+    const innerNavbar = document.querySelector(".navbar-inner");
 
-    if (delta > 0 && currentScroll > 80) {
-        // scrolling down and scrolled enough -> hide top bar
-        topBar.classList.add("hide");
-    } else if (delta < 0) {
-        // scrolling up -> show top bar
-        topBar.classList.remove("hide");
-    }
+    const SCROLL_THRESHOLD = 8;
 
-    // optional: add subtle shadow when inner navbar is scrolled
-    if (currentScroll > 20) {
-        innerNavbar.classList.add("scrolled");
-    } else {
-        innerNavbar.classList.remove("scrolled");
-    }
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const delta = currentScroll - lastScrollTop;
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
+        if (Math.abs(delta) < SCROLL_THRESHOLD) return;
 
+        if (delta > 0 && currentScroll > 80) {
+            topBar.classList.add("hide");
+        } else if (delta < 0) {
+            topBar.classList.remove("hide");
+        }
+
+        if (currentScroll > 20) {
+            innerNavbar.classList.add("scrolled");
+        } else {
+            innerNavbar.classList.remove("scrolled");
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+}
