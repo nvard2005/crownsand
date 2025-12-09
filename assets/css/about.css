@@ -90,16 +90,10 @@ max-width: 565px;
         align-items: flex-end;
     }
 
-
-    .story {
+.story {
     padding-block: 90px;
 }
 
-.container {
-    max-width: 1440px;
-    width: 90%;
-    margin: 0 auto;
-}
 
 .story-inner {
     display: grid;
